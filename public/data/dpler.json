@@ -1,0 +1,6 @@
+{
+  "name": "DPLER TPV Callback API",
+  "Description": "A facility for notifying DPLER about the results of third-party verification calls.",
+  "basePath": "http://api.enroll-qa.sparkboxqa.com",
+  "publicPath": "/v2"
+}
