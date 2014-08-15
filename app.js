@@ -1196,4 +1196,7 @@ if (!module.parent) {
     }
 
     app.listen.apply(app, args);
+} else if (typeof(PhusionPassenger) != 'undefined') {
+  PhusionPassenger.configure({ autoInstall: false });
+  app.listen('passenger');
 }
