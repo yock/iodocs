@@ -973,6 +973,9 @@ function processRequest(req, res, next) {
                 timeStamp = Math.round(new Date().getTime()/1000);
                 sig = crypto.createHash('sha256').update('' + apiKey + apiSecret + timeStamp + '').digest(sig_digest);
             }
+            else if (sig_type == 'token') {
+              sig = 'Token token=' + sig_digest;
+            }
 
             if (sig_location == 'query') {
                 options.path += '&' + sig_param + '=' + sig;
