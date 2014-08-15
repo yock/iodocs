@@ -974,7 +974,7 @@ function processRequest(req, res, next) {
                 sig = crypto.createHash('sha256').update('' + apiKey + apiSecret + timeStamp + '').digest(sig_digest);
             }
             else if (sig_type == 'token') {
-              sig = 'Token token=' + sig_digest;
+              sig = 'Token token=' + apiKey;
             }
 
             if (sig_location == 'query') {
